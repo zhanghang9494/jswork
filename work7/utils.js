@@ -9,7 +9,6 @@ function bubbleSort(str) {
     }
     return arr
 }
-//插入排序
 function insertSort(str) {
     let arr = str.split(',')
     for (let i = 1; i < arr.length; i++) {
