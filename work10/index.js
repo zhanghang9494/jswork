@@ -24,10 +24,9 @@ function monkey(){
 
 function stat() {
     let str = document.getElementById('str').value
-    let obj = {}
-    let value = str.split('').sort().reduce(
+    let obj = str.split('').sort().reduce(
         (a, r) => (a[r]++ || (a[r] = 1), a), {}
         )
-    console.log(value)
-    document.getElementById('result').innerText =JSON.stringify(value)
+    console.log(obj)
+    document.getElementById('result').innerText =JSON.stringify(obj)
 }
