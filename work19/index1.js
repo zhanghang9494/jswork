@@ -19,6 +19,8 @@ document.getElementById('upload').onclick = function () {
             if (name == '') {
                 throw new Error('服务器保存文件失败。');
             }
+            let reg=/^http(s)?:\/\/(.*?)\//
+            let downurl =xhr.responseURL.match(reg)[0]+name.slice(2,name.length-1)
             down.innerHTML = `文件上传成功。<a href=${name}>下载文件${name}</a>`
         }
     };
